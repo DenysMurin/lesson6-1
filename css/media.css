@@ -1,0 +1,93 @@
+body {
+  background-color: teal;
+}
+
+/* ==========min width & max width========== */
+/* 400px+ */
+@media (min-width: 400px) {
+  body {
+    background-color: tomato;
+  }
+}
+/* 768px+ */
+@media (min-width: 768px) {
+  body {
+    background-color: yellowgreen;
+  }
+}
+/* 1200px+ */
+@media (min-width: 1200px) {
+  body {
+    background-color: aqua;
+  }
+}
+/* 1-1199px */
+@media (max-width: 1199px) {
+  body {
+    background-color: tomato;
+  }
+}
+/* 0-767px */
+@media (max-width: 767px) {
+  body {
+    background-color: yellowgreen;
+  }
+}
+/* ==========AND========== */
+/* 768px+ 
+0-1199px 
+работает только когда віполняется два условия вместе
+*/
+@media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* ==========OR========== */
+/* используется либо одно либо другое правило */
+@media (max-width: 767px), (min-width: 1200px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+/* ==========Types========== */
+/* 
+all
+screen
+print
+ */
+/* при печати не нужны интерактивные элементы 
+можнно увеличить размеры шрифта и тд*/
+@media print {
+  .menu {
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .sec {
+    padding-bottom: 60px;
+    padding-top: 50px;
+  }
+  .main-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  .text {
+    margin-bottom: 20px;
+  }
+}
+/* ==========orientation========== */
+/* для телефонов в горизонтальном положении, но стили планшета еще не применяются */
+@media screen and (orientation: landscape) and (max-width: 767px) {
+  body {
+    background-color: tomato;
+  }
+}
+/* или */
+@media screen and (orientation: portrait) {
+  body {
+    background-color: teal;
+  }
+}
